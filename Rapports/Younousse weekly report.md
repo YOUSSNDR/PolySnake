@@ -1,12 +1,12 @@
 
-#<p align=center> <ins>POLYSNAKE</ins>    
-#<p align=center> <ins>REPORTS</ins>
+# <p align=center> <ins>POLYSNAKE</ins>    
+# <p align=center> <ins>REPORTS</ins>
 
 Soufiani
 Younousse
 <ins>2022/2023</ins>
 
-##<p align=center> Session 1
+## <p align=center> Session 1
 <ins> 14/10 <ins>
 
 I have started to schematizes some simple situation to visualize how the program will work.

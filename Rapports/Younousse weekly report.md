@@ -49,4 +49,5 @@ And so we can return to the test witheout potentiometer this time we use an othe
 in it we use directly the microseconds to move the servomotors because the angle are not precise in degrees directly.
 
 The issue look to come from the library use, it might consider 270° which is the max angle of our servomotor for 180° which is the max angle for the sevomotors often use with this library.
-  I will have to check this for the next time.
+  
+I will have to check this for the next time.

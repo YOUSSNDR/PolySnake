@@ -15,7 +15,7 @@ void loop()
   for(int i=0;i>tet2;i++){
     t=0;
     T=millis();
-    while(t<9){
+    while(t<6){
       t=millis()-T;
       Serial.println(t);
       servo.write(i);

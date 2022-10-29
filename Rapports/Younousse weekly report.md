@@ -76,9 +76,9 @@ That left me with this code:
 I have started by some simple test to move one servo motor but it was strugling to move even with a generator.
 The reason was a missunderstood of myself the generator only limitate to some intensity and the servomotor take the intensity it need so  i had to go to 1.2A on the generator even knowing that the [docs about the servomotor](https://fr.aliexpress.com/item/4000538643378.html?spm=a2g0o.productlist.0.0.153e77cbeRq38s&algo_pvid=f97120ce-80fe-4de0-9400-19d6e2d7d48e&algo_exp_id=f97120ce-80fe-4de0-9400-19d6e2d7d48e-37&pdp_ext_f=%7B%22sku_id%22%3A%2210000002764012600%22%7D&pdp_npi=2%40dis%21EUR%2124.62%2110.36%21%21%21%21%21%402100bddf16660742684322015e0f70%2110000002764012600%21sea&curPageLogUid=97oB1ft9vDh0) ask for 0.2A.
 
-then using an upgrade of the program test2 [program test2_2](https://github.com/YOUSSNDR/PolySnake/blob/main/programmes/servomoteurs/test2/test2_2.ino) i have verified the minimum and maximum angles. an obtained this ![Rotation du servo]()
+then using an upgrade of the program test2 [program test2_2](https://github.com/YOUSSNDR/PolySnake/blob/main/programmes/servomoteurs/test2/test2_2.ino) i have verified the minimum and maximum angles. an obtained this ![Rotation du servo](https://github.com/YOUSSNDR/PolySnake/blob/main/Rapports/images%20younousse/rotation%20du%20servo.png?raw=true)
 
-which give us a <span style="clor:red">coefficient of 2/3</span> betwin the asked angle and the obtain angle which give us those important datas ![donées importantes]()
+which give us a <span style="clor:red">coefficient of 2/3</span> betwin the asked angle and the obtain angle which give us those important datas ![donées importantes](https://github.com/YOUSSNDR/PolySnake/blob/main/Rapports/images%20younousse/don%C3%A9es%20importantes.png?raw=true)
 
-i have also been able to try two servomotors moving at the same time with the create program [snake walk](),
+i have also been able to try two servomotors moving at the same time with the create program [snake walk](https://github.com/YOUSSNDR/PolySnake/blob/main/programmes/servomoteurs/snake%20walk/snake%20walk.ino),
 which is only a test for now which will be upgrade next to mimic the snake ondulation.

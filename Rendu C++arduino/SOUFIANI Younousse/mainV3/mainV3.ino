@@ -43,17 +43,37 @@ void trad2(){
     }
 
     void point(){
-      digitalWrite(LED_BUILTIN, HIGH);//led allumée
-      delay(ttap); //attante de 250ms pour les points
-      digitalWrite(LED_BUILTIN, LOW);//led éteinte
-      delay(ttap);
+      float t=millis();
+      float T=0;
+      while (T<250){
+        digitalWrite(LED_BUILTIN, HIGH);
+        T=millis()-t;
+      }
+      t=millis();
+      while(T<250){
+        T=millis()-t;
+      }
+      //digitalWrite(LED_BUILTIN, HIGH);//led allumée
+      //delay(ttap); //attante de 250ms pour les points
+      //digitalWrite(LED_BUILTIN, LOW);//led éteinte
+      //delay(ttap);
     }
 
     void tiret(){
-      digitalWrite(LED_BUILTIN, HIGH);//led allumée
-      delay(ttap * 3); //attente de 750ms pour les tirets
-      digitalWrite(LED_BUILTIN, LOW);//led éteinte
-      delay(ttap);
+    float t=millis();
+    float T=0;
+    while (T<500){
+        digitalWrite(LED_BUILTIN, HIGH);
+        T=millis()-t;
+      }
+      t=millis();
+      while(T<250){
+        T=millis()-t;
+      }
+    //  digitalWrite(LED_BUILTIN, HIGH);//led allumée
+    //  delay(ttap * 3); //attente de 750ms pour les tirets
+    //  digitalWrite(LED_BUILTIN, LOW);//led éteinte
+    //  delay(ttap);
     }
     int verif(int code){
       if (code>=65 && code<=90){

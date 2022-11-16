@@ -49,6 +49,7 @@ void trad2(){
         digitalWrite(LED_BUILTIN, HIGH);
         T=millis()-t;
       }
+      digitalWrite(LED_BUILTIN,LOW);
       t=millis();
       while(T<250){
         T=millis()-t;
@@ -66,6 +67,7 @@ void trad2(){
         digitalWrite(LED_BUILTIN, HIGH);
         T=millis()-t;
       }
+      digitalWrite(LED_BUILTIN,LOW);
       t=millis();
       while(T<250){
         T=millis()-t;

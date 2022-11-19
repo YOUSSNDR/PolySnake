@@ -49,17 +49,23 @@ void loop() {
   }
   else if(etat0==1 && nxtangle==tet[2]){
     servo0.write(tet[2]);
+    servo1.write(tet[1]);
+    servo2.write(tet[0]);
     nxtangle0=tet[etat0];
     etat0=2;
     delay(1000);
   }
   else if (etat0=2){ //la condition sur nxtangle est inutile ici
     servo0.write(tet[1]);
+    servo1.write(tet[2]);
+    servo2.write(tet[1]);
     nxtangle0=tet[0];
     delay(1000);
   }
   else{
     servo0.write(tet[1]);
+    servo1.write(tet[2]);
+    servo2.write(tet[1]);
     nxtangle0=tet[2];
     delay(1000);
   } 

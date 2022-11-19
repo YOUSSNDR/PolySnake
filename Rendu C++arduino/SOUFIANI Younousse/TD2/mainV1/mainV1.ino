@@ -20,10 +20,10 @@ void loop() {
     code=Serial.read(); // le message et lu lettre par lettre et on attribue a chaque fois une lettre a code 
     code=verif(code); //on transforme les majuscules en miniscules
     lm.morsetr(code);  // application de la fonction morsetr appartenant à la classe LettreMorse
-    //Serial.println(char(code)); //affiche la lettre traduite
+    Serial.print(char(code)); //affiche la lettre traduite
     if(lm.morse==""){}
     else{
-      Serial.print(lm.morse); // affiche le code morse de la lettre
+      Serial.println(lm.morse); // affiche le code morse de la lettre
       Serial.print(" ");
       trad2(); //traduit le code morse en clignotement
       delay(ttap*3); // pause entre chaque mots

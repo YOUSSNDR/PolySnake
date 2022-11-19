@@ -49,37 +49,39 @@ void trad2(){
     void point(){
       float t=millis();
       float T=0;
-      while (T<250){
-        digitalWrite(LED_BUILTIN, HIGH);
+      if(T<ttap){
         T=millis()-t;
+        digitalWrite(LED_BUILTIN, HIGH);
       }
       digitalWrite(LED_BUILTIN,LOW);
       t=millis();
-      while(T<250){
+       T=0;
+      if(T<ttap){
         T=millis()-t;
-      }
-      //digitalWrite(LED_BUILTIN, HIGH);//led allumée
-      //delay(ttap); //attante de 250ms pour les points
-      //digitalWrite(LED_BUILTIN, LOW);//led éteinte
-      //delay(ttap);
+      }/*
+      digitalWrite(LED_BUILTIN, HIGH);//led allumée
+      delay(ttap); //attante de 250ms pour les points
+      digitalWrite(LED_BUILTIN, LOW);//led éteinte
+      delay(ttap); */
     }
 
     void tiret(){
     float t=millis();
     float T=0;
-    while (T<500){
-        digitalWrite(LED_BUILTIN, HIGH);
-        T=millis()-t;
+    if(T<2*ttap){      
+      T=millis()-t;
+      digitalWrite(LED_BUILTIN, HIGH);
       }
       digitalWrite(LED_BUILTIN,LOW);
       t=millis();
-      while(T<250){
+      T=0;
+      if(T<ttap){
         T=millis()-t;
-      }
-    //  digitalWrite(LED_BUILTIN, HIGH);//led allumée
-    //  delay(ttap * 3); //attente de 750ms pour les tirets
-    //  digitalWrite(LED_BUILTIN, LOW);//led éteinte
-    //  delay(ttap);
+      }/*
+      digitalWrite(LED_BUILTIN, HIGH);//led allumée
+      delay(ttap * 3); //attente de 750ms pour les tirets
+      digitalWrite(LED_BUILTIN, LOW);//led éteinte
+      delay(ttap);*/
     }
     int verif(int code){
       if (code>=65 && code<=90){

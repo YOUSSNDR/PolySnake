@@ -1,0 +1,6 @@
+/var/log/dump-mysql{
+	daily
+	size 63M
+	rotate 10
+	
+}

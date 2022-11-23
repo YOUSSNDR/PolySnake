@@ -1,0 +1,10 @@
+[Unit]
+Description=execute databasesaving.sh
+After=network.target
+[Service]
+WorkingDirectory=/home/younousse/polytech/TD_SQL
+User=younousse
+Type=oneshot
+ExecStart=/home/younousse/polytech/TD_SQL/databasesaving.sh
+[Install]
+WantedBy=multi-user.target

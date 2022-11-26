@@ -3,8 +3,9 @@ Servo servo;
 Servo servo2;
 void setup() {
   Serial.begin(9600);
-  servo.attach(7);
-  servo2.attach(4);
+  servo.attach(3);
+  servo1.attach(5);
+  servo2.attach(7);
   servo.write(90);
   servo2.write(90);
   delay(3000);

@@ -1,0 +1,9 @@
+[Unit]
+Description=lance  dataabasesaving.service chaque 10min
+
+[Timer]
+OnBootSec=0
+OnUnitActiveSec=10min
+
+[Install]
+WantedBy=timers.target

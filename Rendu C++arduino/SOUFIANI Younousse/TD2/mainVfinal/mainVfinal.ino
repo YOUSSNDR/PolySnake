@@ -6,7 +6,7 @@ using namespace std;
 LettreMorse lm; //on appelle la classe LettreMorse avec lm
 int tti= 250; //temps d'un ti
 int code; 
-char phrase[]="sos sos"; //phrase a traduire
+char phrase[]="c3c1 3s7 un3 phr4s3"; //phrase a traduire
 int n;//taille de la liste
 int i;//entier parcourant la liste
 int t;// variable de temps =millis()
@@ -54,11 +54,22 @@ void loop() {
     lm.morsetr(code);  // application de la fonction morsetr appartenant à la classe LettreMorse
     Serial.print(char(code)); //affiche la lettre traduite
     if(lm.morse==""){}
+    else if(lm.morse==" "){
+      t=millis();
+      T=0;
+      while (T<7*tti){
+        T=millis()-t;
+      } 
+    }
     else{
       Serial.println(lm.morse); // affiche le code morse de la lettre
       Serial.print(" ");
       trad2(); //traduit le code morse en clignotement
-      delay(tti*3); // pause entre chaque mots
+      t=millis();
+      T=0;
+      while (T<3*tti){
+        T=millis()-t;
+      }
     }
   }*/
 

@@ -6,7 +6,7 @@ using namespace std;
 LettreMorse lm; //on appelle la classe LettreMorse avec lm
 int tti= 250; //temps d'un ti
 int code; 
-char phrase[]="c3c1 3s7 un3 phr4s3"; //phrase a traduire
+char phrase[]="c3c1, 3s7 un3 phr4s3! d3 7es7"; //phrase a traduire
 int n;//taille de la liste
 int i;//entier parcourant la liste
 int t;// variable de temps =millis()
@@ -30,7 +30,8 @@ void loop() {
     else if(lm.morse==" "){
       t=millis();
       T=0;
-      while (T<7*tti){
+      // l'espacement entre chaque mot en morse est de 7ti (recommandé) or on a un ti de pause après les fonctions point et tiret soit 7ti total
+      while (T<6*tti){
         T=millis()-t;
       } 
     }
@@ -38,12 +39,6 @@ void loop() {
       Serial.println(lm.morse); // affiche le code morse de la lettre
       Serial.print(" ");
       trad2(); //traduit le code morse en clignotement
-      //delay(tti*3); // pause entre chaque mots
-      t=millis();
-      T=0;
-      while (T<3*tti){
-        T=millis()-t;
-      } 
     }
       i++;
   }
@@ -89,6 +84,8 @@ void loop() {
             }
           }
     }
+
+    // réalisation d'un point "ti" allume la led 250ms,l'éteint et attend 250ms (temps entre chaque lettre)
     void point(){
       digitalWrite(LED_BUILTIN, HIGH);
       t=millis();
@@ -107,6 +104,8 @@ void loop() {
       digitalWrite(LED_BUILTIN, LOW);//led éteinte
       delay(tti);*/
     }
+
+    //réalisation d'un tiret "taah" allume la led pendant 750ms et l'éteint puis attend 250ms pour l'espacement des lettres entre elles
     void tiret(){
       digitalWrite(LED_BUILTIN, HIGH);
       t=millis();
@@ -125,6 +124,8 @@ void loop() {
           digitalWrite(LED_BUILTIN, LOW);//led éteinte
           delay(tti);*/
     }
+
+    //on fait la vérification de si l'entrée est une majuscule ou une miniscule
     int verif(int code){
       if (code>=65 && code<=90){
         return code+32; //entre les majuscules les les miniscules en ascii(dec) il y a une différence de 32.

@@ -2,6 +2,11 @@
 
 Servo myServos[10]; //create 10 servos
 
+float pi=3.14159;
+int TotalNumberofServos=6; //change as required
+float Shift = 2*pi/TotalNumberofServos; // Phase lag between segments
+float Wavelengths, rads;
+int InteriorAngle, SetpointAngle, MaxAngleDisplacement;
 
 void setup() {
   Serial.begin(9600);
@@ -26,13 +31,15 @@ void setup() {
   delay(2000);
 }
 
-void straightline(){
+void ring(){
+  InteriorAngle=180-360/(TotalNumberofServos+1); //general formula for a polygon with 3 or more vertices, +1 vertice between tail and head segment
+  SetpointAngle=abs(InteriorAngle-90); //Offset the angle from the initial position of 90 degrees. 
   for(int i=0; i<10; i++){  
-    myServos[i].write(90);
+    myServos[i].write(SetpointAngle);
     delay(100); 
   }
 }
 
-void loop() {
-  straightline();
+void loop(){
+  ring();
 }

@@ -22,7 +22,7 @@ void setup() {
 
   
   //initialisation des servos formant une ligne droite
-   for(int i=0; i<10; i++){  
+   for(int i=0; i<7; i++){  
     myServos[i].write(90);
     delay(15); 
   }
@@ -39,7 +39,7 @@ void slither(int offset, int Amplitude, int Speed, float Wavelengths){
   }
   for(int i=0; i<360; i++){
    rads=i*pi/180.0;     //convert from degrees to radians
-   for(int j=0; j<10; j++){  
+   for(int j=0; j<7; j++){  
       myServos[j].write(90+offset+Amplitude*sin(Speed*rads+j*Wavelengths*Shift));
      }
    delay(10);

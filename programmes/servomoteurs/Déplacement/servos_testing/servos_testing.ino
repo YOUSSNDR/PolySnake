@@ -2,11 +2,7 @@
 
 Servo myServos[10]; //create 10 servos
 
-float pi=3.14159;
-int TotalNumberofServos=10; //change as required
-float Shift = 2*pi/TotalNumberofServos; // Phase lag between segments
-float Wavelengths, rads;
-int InteriorAngle, SetpointAngle, MaxAngleDisplacement;
+
 
 void setup() {
   Serial.begin(9600);

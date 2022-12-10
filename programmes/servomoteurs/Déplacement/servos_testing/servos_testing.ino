@@ -31,7 +31,7 @@ void setup() {
   delay(2000);
 }
 
-void InchWorm(){
+void test(){
   for(int pos = 0; pos < 45; pos +=  1){
     myServos[0].write(90-pos);
     myServos[1].write(90+2*pos);
@@ -58,5 +58,5 @@ void InchWorm(){
 }
 
 void loop() {
-  InchWorm();
+  test();
 }

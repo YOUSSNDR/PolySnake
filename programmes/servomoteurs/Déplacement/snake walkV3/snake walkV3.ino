@@ -5,9 +5,9 @@ Servo serv3;
 int i1,i2,i3;
 int tet[8]={90,112.5,135,112.5,90,67.5,45,67.5};
 float angle;
-int tempsmillis=90; // temps estimé pour une rotation de 1° (respectant 22.5° en 2s)
+int tempsmillis=44; // temps estimé pour une rotation de 1° (respectant 22.5° en 1s)
 float deltatet=22.5;// différence entre deux angles consécutifs de tet[]
-int degmicros=11;//1 degré donne environ 11micro seconds
+int degmicros=11;//1 degré donne environ 11microseconds
 
 void setup() {
   Serial.begin(9600);
@@ -18,7 +18,7 @@ void setup() {
   serv1.write(tet[0]);
   serv2.write(tet[0]);
   serv3.write(tet[0]);
-  serv2.detach();
+  serv2.detach();//start detach so no order are given to them at the begining
   serv3.detach();
   /*
   les autres servos a détacher
@@ -29,7 +29,7 @@ void setup() {
 void loop() {
 
   void microdelay(tempsmillis){
-    t=millis();
+    int t=millis();
     int T=0;
     while(T<tempsmillis){
       T=millis()-t;
@@ -41,7 +41,7 @@ void loop() {
     return int(500+(1000*angle)/90)
   }
   for(i1=0;i1>7,i1++){
-    if(k=1){serv2.attach(5);}
+    if(k=1){serv2.attach(5);}//so now we can give theme order
     if(k=2){serv3.attach(7);}
     /*
     .
@@ -68,7 +68,7 @@ void loop() {
     /*
     6 servos à ajouter
     */
-    k++;
+    k=k+1;
     
   }
 

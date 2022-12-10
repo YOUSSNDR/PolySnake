@@ -8,7 +8,7 @@ i tried to find the issues by controlling the servomotors with a potentiometer a
 - the servomotor had some troubles to rotate some times, we have to create some loop to avoid asking him an angle to big with not enough time.
 the [program test1](https://github.com/YOUSSNDR/PolySnake/blob/main/programmes/servomoteurs/test1/test1.ino) have been improve to use the potentiometer
 
-![image du test2](https://github.com/YOUSSNDR/PolySnake/blob/main/Rapports/images%20younousse/exp2.jpg?raw=true)
+![image du test2](https://github.com/YOUSSNDR/PolySnake/blob/9571004a612a2b0bd469808a852043d67043e269/Rapports/Soufiani%20Younousse/images%20younousse/exp2.jpg)
 
 And so we can return to the test witheout potentiometer this time we use an other program. [program test2](https://github.com/YOUSSNDR/PolySnake/blob/main/programmes/servomoteurs/test2/test2.ino)
 

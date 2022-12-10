@@ -5,7 +5,7 @@ float pi=3.14159;
 int TotalNumberofServos=6; //change as required
 float Shift = 2*pi/TotalNumberofServos; // Phase lag between segments
 float Wavelengths, rads;
-int InteriorAngle, SetpointAngle, MaxAngleDisplacement;
+int  MaxAngleDisplacement;
 
 void setup() {
   Serial.begin(9600);

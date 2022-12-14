@@ -18,4 +18,4 @@ those different methode are use for different envoronment.
 Serpentine (lateral ondulation) is the one which we will study first as if we stick to the idea of making the robot on wheels it would at list looks like a snake.
 so snake use this movement to push themselves off of objects and then push down where their body bends to move forward
 
-the program create [snake_walkV2](https://github.com/YOUSSNDR/PolySnake/blob/main/programmes/servomoteurs/snake%20walk/snake%20walk%20V2/snake%20walk%20V2.ino) for now use only 3 servomotors which is less than the half of what we will use at the end. no test have been conduct for now with this programm as it has been finished at home.
+the program create [snake_walkV2](https://github.com/YOUSSNDR/PolySnake/blob/d8df9ac458cd2a9e06b5fb9730dac2725eff6cc4/programmes/servomoteurs/D%C3%A9placement/snake%20walk%20V2/snake%20walk%20V2.ino) for now use only 3 servomotors which is less than the half of what we will use at the end. no test have been conduct for now with this programm as it has been finished at home.

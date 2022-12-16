@@ -7,6 +7,9 @@ float Shift = 2*pi/TotalNumberofServos; // Phase lag between segments
 float Wavelengths, rads;
 int  MaxAngleDisplacement;
 int cmove=0;
+int K1=35;
+int K2=K1;
+int v=2;
 
 void setup() {
   Serial.begin(9600);
@@ -32,6 +35,13 @@ void setup() {
 
 }
 
+void straightline(){
+  for(int i=0; i<10; i++){  
+    myServos[i].write(90);
+    delay(100); 
+  }
+}
+
 void slither(int offset, int Amplitude, int Speed, float Wavelengths){
   MaxAngleDisplacement=abs(offset)+abs(Amplitude); //amount servo can rotate from the SetpointAngle without going out of the [0,180] degree range
   while(MaxAngleDisplacement>90){ //prevents a setpoint angle outside the rage of[0,180]
@@ -40,9 +50,9 @@ void slither(int offset, int Amplitude, int Speed, float Wavelengths){
   }
   for(int i=0; i<360; i++){
    rads=i*pi/180.0;     //convert from degrees to radians
+   cmove ++;
    for(int j=0; j<8; j++){  
       myServos[j].write(90+offset+Amplitude*sin(Speed*rads+j*Wavelengths*Shift));
-      cmove ++;
      }
    delay(10);
   }
@@ -59,8 +69,26 @@ wavelenght=longueur d'onde a rechercher
 pourrait permettre au serpent d'avancer sans roues
 */
 
-  slither(0, 5, 6, 1); //avance
+  //slither(0, 20, 3, 1); //avance
   //slither(10, 35, 2, 1.5); //avance et tourne légèrement (droite)
   //slither(-10, 35, 2, 1.5);//avance et tourne légèrement (gauche)
+  K1=35;
 
+  for(int m=0;m<21;m++){
+    slither(m,K1,v,1);
+    delay(200);
+  }
+ for(int m=20;m>0;m--){
+    slither(m,K1,v,1);
+    delay(200);
+ 
+}
+ for(int m=0;m<-20;m--){
+    slither(m,K1,v,1);
+    delay(200);
+ }
+ for(int m=-20;m>0;m++){
+    slither(m,K1,v,1);
+    delay(200);
+}
 }

@@ -13,10 +13,10 @@ void setup() {
   myServos[3].attach(A3);
   myServos[4].attach(A4);
   myServos[5].attach(A5);
-  myServos[6].attach(4);
-  myServos[7].attach(3);
-  myServos[8].attach(8);
-  myServos[9].attach(7);
+  myServos[6].attach(7);
+  myServos[7].attach(6);
+  myServos[8].attach(5);
+  myServos[9].attach(4);
 
   //Initialise snake in a straight line
   for(int i=0; i<10; i++){  

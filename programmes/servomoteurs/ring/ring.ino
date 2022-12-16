@@ -3,7 +3,7 @@
 Servo myServos[10]; //create 10 servos
 
 float pi=3.14159;
-int TotalNumberofServos=6; //change as required
+int TotalNumberofServos=7; //change as required
 float Shift = 2*pi/TotalNumberofServos; // Phase lag between segments
 float Wavelengths, rads;
 int InteriorAngle, SetpointAngle, MaxAngleDisplacement;

@@ -13,17 +13,17 @@ Younousse
 
 I have started to schematizes some simple situation to visualize how the program will work.
 Situation 1(left turn):
-![how it works](https://github.com/YOUSSNDR/PolySnake/blob/main/Rapports/images%20younousse/snake1.png?raw=true)  
-![how it works2](https://github.com/YOUSSNDR/PolySnake/blob/main/Rapports/images%20younousse/snake2.png?raw=true)
-![how it works3](https://github.com/YOUSSNDR/PolySnake/blob/main/Rapports/images%20younousse/snake3.png?raw=true)
-![how it works4](https://github.com/YOUSSNDR/PolySnake/blob/main/Rapports/images%20younousse/snake4.png?raw=true)
+![how it works](https://github.com/YOUSSNDR/PolySnake/blob/d8df9ac458cd2a9e06b5fb9730dac2725eff6cc4/Rapports/Soufiani%20Younousse/images%20younousse/snake1.png)  
+![how it works2](https://github.com/YOUSSNDR/PolySnake/blob/d8df9ac458cd2a9e06b5fb9730dac2725eff6cc4/Rapports/Soufiani%20Younousse/images%20younousse/snake2.png)
+![how it works3](https://github.com/YOUSSNDR/PolySnake/blob/d8df9ac458cd2a9e06b5fb9730dac2725eff6cc4/Rapports/Soufiani%20Younousse/images%20younousse/snake3.png)
+![how it works4](https://github.com/YOUSSNDR/PolySnake/blob/d8df9ac458cd2a9e06b5fb9730dac2725eff6cc4/Rapports/Soufiani%20Younousse/images%20younousse/snake4.png)
 
 
 study of the servomotor and the Arduino library needed to use it.
 I start by moving one servomotors then two of them.
 There is the program used:
 [program test1](https://github.com/YOUSSNDR/PolySnake/blob/main/programmes/servomoteurs/test1/test1.ino)
-![image du test1](https://github.com/YOUSSNDR/PolySnake/blob/main/Rapports/images%20younousse/exp1.jpg?raw=true)
+![image du test1](https://github.com/YOUSSNDR/PolySnake/blob/d8df9ac458cd2a9e06b5fb9730dac2725eff6cc4/Rapports/Soufiani%20Younousse/images%20younousse/exp1.jpg)
 
 They are troubles with the servomotors:
 - some unwanted movement

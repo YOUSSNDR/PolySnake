@@ -3,7 +3,7 @@
 
 To start this new session we add one more module to the snake 
 and fix some screw issues on the snake (some screw were to long and so were rubbing the snake).
-![seven_module_snake]()
+![seven_module_snake](https://github.com/YOUSSNDR/PolySnake/blob/c0cd1019031eaf494a0b610ea741b0b6c6f53574/Rapports/Soufiani%20Younousse/images%20younousse/7-modules-snake.png)
 Change of plan from what we wanted to do last week.
 as with the control of his ondulation the snake can turn right and left we might use that to make it turn on wheels.
 but for that we need to work the transition.

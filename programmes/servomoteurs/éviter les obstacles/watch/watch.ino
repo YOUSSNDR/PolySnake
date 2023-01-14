@@ -8,11 +8,10 @@ int pinEcho = 2;
 long temps;
 int distance;
 //float vson= 340.29; //(m/s) error can come from here as it depends on the temperature
-int liste[60]={}; //cette liste contiendra les 60 distances mesurées
-int vue[]={90,135,180,90,45,0};//les différents angles de vues
+int liste[60]={}; //this list will contain the 60 values measured
+int vue[]={90,135,180,90,45,0};//the diffrents vision angle (might be reduct later)
 void setup() {
   Serial.begin(9600);
-  pinMode(A1,OUTPUT);
   head.attach(2);
 
   //define the Pin of the ultrasound sensor
@@ -25,21 +24,22 @@ void setup() {
   delay(2000);
 
 }
+//the function allowing to take the measure
 float pulse(){
 
   digitalWrite(pinTrig, HIGH);        
   delayMicroseconds(10);
   digitalWrite(pinTrig, LOW);
 
-  temps = pulseIn(pinEcho, HIGH);    
-//soit le temps durant  lequel dure l'écho
+  temps = pulseIn(pinEcho, HIGH);   //time of the echo
+  
   if (temps > 25000) {              
     Serial.println("Echec de la mesure");
   }
 
   else {
-    temps = temps/2;
-    distance = (temps*340)/10000.0;                  
+    temps = temps/2;//as the soud go to the obstacle and come back
+    distance = (temps*340)/10000.0;// in constant speed speed=distance/times
    //Serial.print("Distance: ");
     //Serial.print(distance);
     //Serial.println(" cm");
@@ -48,6 +48,7 @@ float pulse(){
 }
 
 void loop() {
+//the function to look around and take the measure
 for (int i=0;i<6;i++){
   head.write(vue[i]);
   delay(1000);

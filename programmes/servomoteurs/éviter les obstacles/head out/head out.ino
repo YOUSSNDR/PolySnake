@@ -66,6 +66,7 @@ pourrait permettre au serpent d'avancer sans roues
   //slither(20, 35, 2, 1.5); //avance et tourne légèrement (droite)
   //slither(-20, 35, 2, 1.5);//avance et tourne légèrement (gauche)
 
+//test vision de proximité
 for (int i=0;i<6;i++){
   myServos[6].write(vue[i]);
   delay(1000);

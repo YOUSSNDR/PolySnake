@@ -34,5 +34,26 @@ void straightline(){
 }
 
 void loop() {
-  straightline();
+  myServos[0].write(0);
+    delay(1000); 
+  myServos[0].write(135);
+  myServos[1].write(0);
+    delay(1000); 
+  myServos[1].write(135);
+  myServos[2].write(0);  
+    delay(1000); 
+  myServos[2].write(135);
+  myServos[3].write(0);
+    delay(1000);
+  myServos[3].write(135);  
+  myServos[4].write(0);
+    delay(1000);
+  myServos[4].write(135);
+  myServos[5].write(0);
+    delay(1000);
+  myServos[5].write(135);
+  myServos[6].write(0);
+    delay(1000);
+  myServos[6].write(135);
+    delay(10000); 
 }

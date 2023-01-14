@@ -6,7 +6,7 @@ using namespace std;
 LettreMorse lm; //on appelle la classe LettreMorse avec lm
 int tti= 250; //temps d'un ti
 int code; 
-char phrase[]="c3c1, 3s7 un3 phr4s3! d3 7es7"; //phrase a traduire
+char phrase[]="SOS ??!/. sos"; //phrase a traduire
 int n;//taille de la liste
 int i;//entier parcourant la liste
 int t;// variable de temps =millis()

@@ -51,12 +51,12 @@ void slither(int offset, int Amplitude, int Speed, float Wavelengths){
    for(int j=0; j<7; j++){  
       myServos[j].write(90+offset+Amplitude*sin(Speed*rads+j*Wavelengths*Shift));
       if(90+offset+Amplitude*sin(Speed*rads+j*Wavelengths*Shift)>incre){
-        incre=90+offset+Amplitude*sin(Speed*rads+j*Wavelengths*Shift);
+        incre=90+offset+Amplitude*sin(Speed*rads+j*Wavelengths*Shift); //this will take the highest value in one side
       }
      }
    delay(5);
   }
-  Serial.println(incre);
+  Serial.println(incre); //and here i show the value
 }
 
 void turn(int angle){

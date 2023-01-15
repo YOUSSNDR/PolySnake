@@ -1,4 +1,4 @@
-## <p align=center> Session 10
+## <p align=center> Session 10 and 11
 <ins>13/01</ins>
 
 ### Holidays Work
@@ -24,7 +24,7 @@ there is a photo of the ultrasound sensor working alone:
 there is the program and a video of the snake analysing his surounding after the slither move:
 [surrounding_detection](https://drive.google.com/file/d/1-J1L_gpx6d5yrn2LekHKFwAyNEZ4aanV/view?usp=share_link)
 
-### course
+### course session 10
 We finally chose an other way for the snake to know when to make a turn, the idea is to use a rasbery pie camera to analyse the image of an arrow giving the direction the snake have to take.
 
 So for this session i chose to work on the program to make the snake go forward or backward for that we use a DC 2 axes 5V motor, i came up with this program:

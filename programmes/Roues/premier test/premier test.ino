@@ -13,7 +13,7 @@ delay(1000);
 }
 
 void loop() {
-  /*tps=millis();
+  tps=millis();
     tpsp=0;
 while (tpsp-tps<2000){
   tpsp=millis();
@@ -31,19 +31,7 @@ while (tpsp-tps<2000){
 }
 digitalWrite(Ma,LOW);
 digitalWrite(Mr,LOW);
-delay(10000);*/
-for(int i=0;i<256;i++){
-tps=millis();
-Serial.println(i);
-while(tpsp-tps<500){
-tpsp=millis();
-analogWrite(Ma,i);
-analogWrite(Mr,LOW);
-}
-}
-delay(5000);
-analogWrite(Ma,LOW);
-analogWrite(Mr,LOW);
+delay(10000);
 }
 
 

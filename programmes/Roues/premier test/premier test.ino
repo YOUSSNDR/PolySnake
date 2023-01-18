@@ -31,7 +31,7 @@ while (tpsp-tps<2000){
 }
 digitalWrite(Ma,LOW);
 digitalWrite(Mr,LOW);
-delay(10000);
+delay(2000);
 }
 
 

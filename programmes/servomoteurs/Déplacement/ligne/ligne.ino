@@ -14,9 +14,9 @@ void setup() {
   myServos[4].attach(9);
   myServos[5].attach(12);
   myServos[6].attach(13);
-  myServos[7].attach(7);
-  myServos[8].attach(8);
-  myServos[9].attach(5);
+  //myServos[7].attach(7);
+  //myServos[8].attach(8);
+  //myServos[9].attach(5);
 
   //Initialise snake in a straight line
   for(int i=0; i<10; i++){  

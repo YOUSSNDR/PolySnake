@@ -50,8 +50,8 @@ void slither(int offset, int Amplitude, int Speed, float Wavelengths){
    for(int j=0; j<8; j++){  
       myServos[j].write(90+offset+Amplitude*sin(Speed*rads+j*Wavelengths*Shift));
      }
-   delay(10);
-  }
+     delay(10);
+    }
 }
 
 void loop() {
@@ -71,6 +71,6 @@ le shift permet une différence de phase entre les servos
   slither(0,30,2,1.5);
     
   //slither(20, 35, 3, 1); //avance et tourne légèrement (droite)
-  slither(-20, 35, 2, 1.5);//avance et tourne légèrement (gauche)
+  //slither(-20, 35, 2, 1.5);//avance et tourne légèrement (gauche)
 
 }

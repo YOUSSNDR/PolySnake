@@ -2,10 +2,11 @@
 Servo myServos[10];
 
 float pi=3.14159;
-int TotalNumberofServos=7; //change as required
+int TotalNumberofServos=7; //On en compte 6 en retirant la tête
 float Shift = 2*pi/TotalNumberofServos; // Phase lag between segments
 float Wavelengths, rads;
 int  MaxAngleDisplacement;
+int incre=0;
 
 void setup() {
   Serial.begin(9600);
@@ -47,13 +48,27 @@ void slither(int offset, int Amplitude, int Speed, float Wavelengths){
   }
   for(int i=0; i<360; i++){
    rads=i*pi/180.0;     //convert from degrees to radians
-   for(int j=0; j<8; j++){  
+   for(int j=0; j<7; j++){  
       myServos[j].write(90+offset+Amplitude*sin(Speed*rads+j*Wavelengths*Shift));
+      if(90+offset+Amplitude*sin(Speed*rads+j*Wavelengths*Shift)>incre){
+        incre=90+offset+Amplitude*sin(Speed*rads+j*Wavelengths*Shift); //this will take the highest value in one side
+      }
      }
-   delay(10);
+   delay(5);
   }
+  Serial.println(incre); //and here i show the value
 }
 
+void turn(int angle){
+  myServos[6].write(angle);
+}
+//angle stt positif
+void test_turn(int anglemax,int ){
+  for(int i=90;i<anglemax,i++){
+    myServos[6].write(i);
+    delay(500);    
+  }
+}
 void loop() {
  /*la fonction slither est le "snakewalk" 
  jouer sur le ofset permet une rotation du serpent
@@ -69,8 +84,9 @@ le shift permet une différence de phase entre les servos
     i=i+5;
 }*/
   slither(0,30,2,1.5);
-    
+  delay(6000);
   //slither(20, 35, 3, 1); //avance et tourne légèrement (droite)
-  slither(-20, 35, 2, 1.5);//avance et tourne légèrement (gauche)
+  //slither(-20, 35, 2, 1.5);//avance et tourne légèrement (gauche)
 
 }
+

@@ -14,9 +14,9 @@ void setup() {
   myServos[4].attach(9);
   myServos[5].attach(12);
   myServos[6].attach(13);
-  //myServos[7].attach(7);
-  //myServos[8].attach(8);
-  //myServos[9].attach(5);
+  myServos[7].attach(7);
+  myServos[8].attach(8);
+  myServos[9].attach(5);
 
   //Initialise snake in a straight line
   for(int i=0; i<10; i++){  
@@ -34,5 +34,26 @@ void straightline(){
 }
 
 void loop() {
-  straightline();
+  myServos[0].write(0);
+    delay(1000); 
+  myServos[0].write(135);
+  myServos[1].write(0);
+    delay(1000); 
+  myServos[1].write(135);
+  myServos[2].write(0);  
+    delay(1000); 
+  myServos[2].write(135);
+  myServos[3].write(0);
+    delay(1000);
+  myServos[3].write(135);  
+  myServos[4].write(0);
+    delay(1000);
+  myServos[4].write(135);
+  myServos[5].write(0);
+    delay(1000);
+  myServos[5].write(135);
+  myServos[6].write(0);
+    delay(1000);
+  myServos[6].write(135);
+    delay(10000); 
 }

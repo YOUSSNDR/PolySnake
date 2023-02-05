@@ -12,7 +12,7 @@ void mouvement::slither(int offset, int Amplitude, int Speed, float wavelengths)
   }
   for(int i=0; i<360; i++){
    this->rads=i*pi/180.0;     //convert from degrees to radians le this nous permet de selectionner la variable rads de la class mouvement
-   for(int j=0; j<8; j++){  
+   for(int j=0; j<9; j++){  
       myServos[j].write(90+offset+Amplitude*sin(Speed*this->rads+j*wavelengths*Shift));
      }
    delay(10);

@@ -15,12 +15,12 @@ void setup() {
   Serial.begin(9600);
   myServos[0].attach(2);
   myServos[1].attach(3);
-  myServos[2].attach(8);
-  myServos[3].attach(9);
-  myServos[4].attach(12);
-  myServos[5].attach(13);
-  //myServos[6].attach(7);
-  //myServos[7].attach(6);
+  myServos[2].attach(4);
+  myServos[3].attach(6);
+  myServos[4].attach(7);
+  myServos[5].attach(8);
+  myServos[6].attach(9);
+  myServos[7].attach(12);
   //myServos[8].attach(5);
   //myServos[9].attach(4);
 

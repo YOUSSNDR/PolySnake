@@ -4,7 +4,7 @@ class mouvement{
     mouvement();
     Servo myServos[10];
     float pi=3.14159;
-    int TotalNumberofServos=10;
+    int TotalNumberofServos=8;
     float Shift = 2*pi/TotalNumberofServos;
     float Wavelengths, rads;
     int  MaxAngleDisplacement;

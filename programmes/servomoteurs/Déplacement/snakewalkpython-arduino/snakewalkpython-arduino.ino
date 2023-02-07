@@ -28,7 +28,7 @@ void setup() {
   myServos[7].attach(11);
   myServos[8].attach(8);
   myServos[9].attach(5);
-
+  valsRec[0]=0;
   
   //initialisation des servos formant une ligne droite
    for(int i=0; i<8; i++){  
@@ -61,6 +61,7 @@ void slither(int offset, int Amplitude, int Speed, float Wavelengths){
       if (valsRec[0]==1){
         while(valsRec[0]==1){
           straightline();
+          serialData.Get(valsRec);          
         }
       }
       myServos[j].write(90+offset+Amplitude*sin(Speed*rads+j*Wavelengths*Shift));
@@ -83,8 +84,8 @@ le shift permet une différence de phase entre les servos
     slither(i, 30, 3, 1); //avance
     i=i+5;
 }*/
-  //slither(0,30,2,1.5);
-    straightline();
+  slither(0,40,2,1.5);
+  //straightline();
   //slither(20, 35, 3, 1); //avance et tourne légèrement (droite)
   //slither(-20, 35, 2, 1.5);//avance et tourne légèrement (gauche)
 

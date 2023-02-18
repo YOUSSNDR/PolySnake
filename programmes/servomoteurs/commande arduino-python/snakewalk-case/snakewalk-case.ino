@@ -12,6 +12,11 @@ int TotalNumberofServos=7; //change as required
 float Shift = 2*pi/TotalNumberofServos; // Phase lag between segments
 float Wavelengths, rads;
 int  MaxAngleDisplacement;
+bool arret=false;
+int O=0;
+int A=0;
+int S=0;
+int firstval;
 
 void setup() {
   Serial.begin(9600);
@@ -48,6 +53,7 @@ void straightline(){
 
 }
 
+
 void slither(int offset, int Amplitude, int Speed, float Wavelengths){
   MaxAngleDisplacement=abs(offset)+abs(Amplitude); //amount servo can rotate from the SetpointAngle without going out of the [0,180] degree range
   while(MaxAngleDisplacement>90){ //prevents a setpoint angle outside the rage of[0,180]
@@ -56,31 +62,86 @@ void slither(int offset, int Amplitude, int Speed, float Wavelengths){
   }
   for(int i=0; i<360; i++){
    rads=i*pi/180.0;     //convert from degrees to radians
-   for(int j=0; j<8; j++){ 
+   serialData.Get(valsRec);
+   if(valsRec[0]=!firstval){
+     break;
+   }
+   for(int j=0; j<8; j++){  
       myServos[j].write(90+offset+Amplitude*sin(Speed*rads+j*Wavelengths*Shift));
-
      }
      delay(10);
-    }    
+     if (arret==true){
+       break;
+     }
+     if (arret==true){
+       break;
+     }
+    }
+   
 }
 
+
+
 void loop() {
- /*la fonction slither est le "snakewalk" 
- jouer sur le ofset permet une rotation du serpent
-jouer sur l'amplitude fera varier la place prise lors du mouvement
-speed joue sur la vitesse du mouvement
-wavelenght joue sur la longueur d'onde des oscillations
-le shift permet une différence de phase entre les servos
-
-*/
-
- /* for(int i=0;i<45;){  
-    slither(i, 30, 3, 1); //avance
-    i=i+5;
-}*/
-  slither(40,25,2.5,1.5);
-  //straightline();
-  //slither(20, 35, 3, 1); //avance et tourne légèrement (droite)
-  //slither(-20, 35, 2, 1.5);//avance et tourne légèrement (gauche)
-
+  
+    while(true){
+    switch (valsRec[0]){
+     case 0:
+      while(valsRec[0]==0 || valsRec[0]==18 || valsRec[0]==20 || valsRec[0]==24){
+        serialData.Get(valsRec);
+        firstval==valsRec[0];
+      }
+     case 1:
+      straightline();
+      serialData.Get(valsRec);
+      firstval==valsRec[0];
+     case 2:
+     arret=false;
+      O=0;
+      A=30;
+      S=2.5;      
+      slither(O,A,S,1.5);
+      serialData.Get(valsRec);
+      firstval==valsRec[0];
+     case 4:
+     arret=false;
+      O=45;
+      A=30;
+      S=2.5;      
+      slither(O,A,S,1.5);
+      serialData.Get(valsRec);
+      firstval==valsRec[0];
+     case 8:
+     arret=false;
+      O=-45;
+      A=30;
+      S=2.5;      
+      slither(O,A,S,1.5);
+      serialData.Get(valsRec);
+      firstval==valsRec[0];
+     case 17:
+      valsRec[0]=1;
+     case 18:
+      arret=true;      
+      O=0;
+      A=30;
+      S=2.5;      
+      slither(O,A,S,1.5);
+      valsRec[0]=0;
+     case 20:
+     arret=true;      
+      O=45;
+      A=30;
+      S=2.5;      
+      slither(O,A,S,1.5);
+      valsRec[0]=0;
+     case 24:
+     arret=true;      
+      O=-45;
+      A=30;
+      S=2.5;      
+      slither(O,A,S,1.5);
+      valsRec[0]=0;
+            }
+        }
 }

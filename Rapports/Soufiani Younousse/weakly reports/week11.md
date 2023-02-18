@@ -6,7 +6,7 @@
     for that i've: 
     - listed the movement i wanted 
     - made a logical table out of them
-    and so i was left with that : ![table_logique1](Rapports/Soufiani Younousse/images younousse/table logique1.jpg) ![table_logique2](https://github.com/YOUSSNDR/PolySnake/blob/15777205acda2ff8ac74c616b032026ad5cf631f/Rapports/Soufiani%20Younousse/images%20younousse/table%20logique2.jpg)
+    and so i was left with that : ![table_logique1](https://github.com/YOUSSNDR/PolySnake/blob/597d010115ae88e9abda92383aeb4ddf81eb186f/Rapports/Soufiani%20Younousse/images%20younousse/table%20logique1.jpg) ![table_logique2](https://github.com/YOUSSNDR/PolySnake/blob/15777205acda2ff8ac74c616b032026ad5cf631f/Rapports/Soufiani%20Younousse/images%20younousse/table%20logique2.jpg)
     (Maybe a little bit to much for the task) I have now all the movement i want to use and a number link to them.
     they are 9 cases:
         - line (snake in line)

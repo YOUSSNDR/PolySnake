@@ -12,6 +12,7 @@ int TotalNumberofServos=7; //change as required
 float Shift = 2*pi/TotalNumberofServos; // Phase lag between segments
 float Wavelengths, rads;
 int  MaxAngleDisplacement;
+int i=0;
 
 void setup() {
   Serial.begin(9600);
@@ -84,7 +85,10 @@ le shift permet une différence de phase entre les servos
     slither(i, 30, 3, 1); //avance
     i=i+5;
 }*/
-  slither(0,40,2,1.5);
+if (i,i==0,i++){
+  slither(45,0,0,0);
+  
+}
   //straightline();
   //slither(20, 35, 3, 1); //avance et tourne légèrement (droite)
   //slither(-20, 35, 2, 1.5);//avance et tourne légèrement (gauche)

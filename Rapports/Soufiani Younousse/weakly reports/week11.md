@@ -17,7 +17,8 @@
         - stop left (the snake get in position to turn left then stop) 
         - stop right (the snake get in position to turn right then stop)
         - stop (the snake stop his mouvement)
-             mouvement that we will later reduce to four:
+            
+        mouvement that we will later reduce to four:
         - line (snake in line)
         - slither (the snake go forward)
         - slither right (the snake take a right turn)

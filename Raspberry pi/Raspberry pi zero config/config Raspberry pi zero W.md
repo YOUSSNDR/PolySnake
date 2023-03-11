@@ -48,7 +48,7 @@ On peut ensuite retirer la carte et la remettre au Raspberry pi, il faudra branc
 
 ##### 2) connexion SSH
 
-une fois la connexion wifi établi, il nous faut relever l'adresse ip ou l'identifiant de la raspberry, si vous avez utilisez le partage de connexion de votre téléphone regardez dans les appareils connectés []().
+une fois la connexion wifi établi, il nous faut relever l'adresse ip ou l'identifiant de la raspberry, si vous avez utilisez le partage de connexion de votre téléphone regardez dans les appareils connectés ![appareils connecté](https://github.com/YOUSSNDR/PolySnake/blob/9e3632deabf624a2d54ae8168d09a4499ff6525f/Raspberry%20pi/Raspberry%20pi%20zero%20config/aide%20images/appareils%20connect%C3%A9s.jpg).
 
 on va maintenant se connecté à la carte en SSH, pour cela on peut utiliser l'invite de commande windows(ou le terminal linux):
 - on utilise la commande "ssh pi@raspberrypi" où ssh "pi@adresseip"(en remplaçant adresseip par votre adresse ip)

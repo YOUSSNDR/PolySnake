@@ -60,6 +60,7 @@ void slither(int offset, int Amplitude, int Speed, float Wavelengths){
    for(int j=0; j<8; j++){  
       serialData.Get(valsRec);
       if (valsRec[0]==1){
+        Serial.print("stop");
         while(valsRec[0]==1){
           straightline();
           serialData.Get(valsRec);          
@@ -85,12 +86,12 @@ le shift permet une différence de phase entre les servos
     slither(i, 30, 3, 1); //avance
     i=i+5;
 }*/
-if (i,i==0,i++){
-  slither(45,0,0,0);
+//if (i,i==0,i++){
+//  slither(45,0,0,0);
   
-}
+//}
   //straightline();
-  //slither(20, 35, 3, 1); //avance et tourne légèrement (droite)
+  slither(0, 35, 2, 1.5); //avance et tourne légèrement (droite)
   //slither(-20, 35, 2, 1.5);//avance et tourne légèrement (gauche)
 
 }

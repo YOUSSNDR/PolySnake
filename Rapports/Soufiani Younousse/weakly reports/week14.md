@@ -4,14 +4,14 @@
 For this Session we made a lot of test and verify a theorie we had.
 
 ### Cleaning Time:
-So first we start the session by cleaning the new pieces ![cleaning session]() 
+So first we start the session by cleaning the new pieces ![cleaning session2.1](Rapports/Soufiani Younousse/images younousse/cleaning session2.jpg) ![cleaning session2.2](https://github.com/YOUSSNDR/PolySnake/blob/a40525dafb939e6da7e1822bee788daa5faeb47e/Rapports/Soufiani%20Younousse/images%20younousse/cleaning%20session2.2.jpg) 
 
 Those new pieces can be mounted on wheels which will allows us to make the first tests.
 
 ### tests:
 The idea we had was that more of the work on the slithering motion was made by the friction.
 And as it was pretty complicated to make a snake skin we chosed Rubber wheels (as they will roll if the force that they receive is parallel to them and be block more and more by friction as the force get perpendicular to them).
-after assembling the snake and initialising the servomotors it looked like that: ![snake on wheels]()
+after assembling the snake and initialising the servomotors it looked like that: ![snake on wheels](https://github.com/YOUSSNDR/PolySnake/blob/a40525dafb939e6da7e1822bee788daa5faeb47e/Rapports/Soufiani%20Younousse/images%20younousse/snake%20on%20wheels.jpg)
 
 then we used those [different program](https://github.com/YOUSSNDR/PolySnake/tree/main/programmes/Classes/mouvement) to make it move:
 the first test worked but with some troubles, as the snake make movement that are too big we have to much friction.

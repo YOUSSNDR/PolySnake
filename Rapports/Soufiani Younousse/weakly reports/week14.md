@@ -4,7 +4,7 @@
 For this Session we made a lot of test and verify a theorie we had.
 
 ### Cleaning Time:
-So first we start the session by cleaning the new pieces ![cleaning session2.1](Rapports/Soufiani Younousse/images younousse/cleaning session2.jpg) ![cleaning session2.2](https://github.com/YOUSSNDR/PolySnake/blob/a40525dafb939e6da7e1822bee788daa5faeb47e/Rapports/Soufiani%20Younousse/images%20younousse/cleaning%20session2.2.jpg) 
+So first we start the session by cleaning the new pieces ![cleaning session2.1](https://github.com/YOUSSNDR/PolySnake/blob/49695f91e38541509f2f2f32165994b588bfb37e/Rapports/Soufiani%20Younousse/images%20younousse/cleaning%20session2.jpg) ![cleaning session2.2](https://github.com/YOUSSNDR/PolySnake/blob/a40525dafb939e6da7e1822bee788daa5faeb47e/Rapports/Soufiani%20Younousse/images%20younousse/cleaning%20session2.2.jpg) 
 
 Those new pieces can be mounted on wheels which will allows us to make the first tests.
 

@@ -12,7 +12,6 @@ int  MaxAngleDisplacement;
 void setup() {
   Serial.begin(9600);
 
-
   myServos[0].attach(2);
   myServos[1].attach(3);
   myServos[2].attach(4);
@@ -59,7 +58,21 @@ void slither(int offset, int Amplitude, int Speed, float Wavelengths){
     }    
 }
 
+void slitherback(int offset, int Amplitude, int Speed, float Wavelengths){
+  MaxAngleDisplacement=abs(offset)+abs(Amplitude); //amount servo can rotate from the SetpointAngle without going out of the [0,180] degree range
+  while(MaxAngleDisplacement>90){ //prevents a setpoint angle outside the rage of[0,180]
+    Amplitude=abs(Amplitude)-1;
+    MaxAngleDisplacement=abs(offset)+Amplitude;
+  }
+  for(int i=0; i<360; i++){
+   rads=i*pi/180.0;     //convert from degrees to radians
+   for(int j=7; j>0; j--){ 
+      myServos[j].write(90+offset+Amplitude*sin(Speed*rads+j*Wavelengths*Shift));
 
+     }
+     delay(10);
+    }    
+}
 void loop() {
  /*la fonction slither est le "snakewalk" 
  jouer sur le ofset permet une rotation du serpent
@@ -74,9 +87,15 @@ le shift permet une différence de phase entre les servos
     slither(i, 30, 3, 1); //avance
     i=i+5;
 }*/
-  
-  slither(2,35,2,1.3);
+  //slither(0,25,2,2);
   //straightline();
+  slitherback(0,30,2,2);
+  straightline();
+  //slither(40,25,2,2);
+  //straightline();
+  //slitherback(40,25,2,2);
+  //straightline();  
+
   //slither(20, 35, 3, 1); //avance et tourne légèrement (droite)
   //slither(-20, 35, 2, 1.5);//avance et tourne légèrement (gauche)
 

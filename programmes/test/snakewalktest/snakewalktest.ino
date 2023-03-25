@@ -51,11 +51,10 @@ void slither(int offset, int Amplitude, int Speed, float Wavelengths){
   }
   for(int i=0; i<360; i++){
    rads=i*pi/180.0;     //convert from degrees to radians
-   for(int j=0; j<8; j++){ 
+   int j=5; 
       myServos[j].write(90+offset+Amplitude*sin(Speed*rads+j*Wavelengths*Shift));
 
-     }
-     delay(10);
+     delay(1000);
     }    
 }
 
@@ -75,8 +74,8 @@ le shift permet une différence de phase entre les servos
     i=i+5;
 }*/
   
-  slither(2,35,2,1.3);
-  //straightline();
+  slither(2,30,2,1.5);
+  //traightline();
   //slither(20, 35, 3, 1); //avance et tourne légèrement (droite)
   //slither(-20, 35, 2, 1.5);//avance et tourne légèrement (gauche)
 

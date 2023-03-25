@@ -1,15 +1,10 @@
 #include"mouvement.h"
 #include <Servo.h>
-#include <cvzone.h>
 
 mouvement mymove;
 
-SerialData serialData(1,1);//(nombredevaleurs,chiffreparvalleur)
-int valsRec[1]; //tableau de la taille nombredevaleurs
-
 void setup() {
   Serial.begin(9600);
-  serialData.begin();
   mymove.myServos[0].attach(2);
   mymove.myServos[1].attach(3);
   mymove.myServos[2].attach(4);
@@ -18,8 +13,8 @@ void setup() {
   mymove.myServos[5].attach(8);
   mymove.myServos[6].attach(10);
   mymove.myServos[7].attach(11);
-  mymove.myServos[8].attach(8);
-  mymove.myServos[9].attach(5);
+  //mymove.myServos[8].attach(8);
+  //mymove.myServos[9].attach(5);
 
   
   //initialisation des servos formant une ligne droite
@@ -28,8 +23,8 @@ void setup() {
 }
 
 void loop(){
-//mymove.slither(0, 45, 2, 1);
-mymove.straightline();
+mymove.slither(0, 30, 2, 0.8);
+//mymove.straightline();
 
  /*int K1=35;
   int K2=K1;

@@ -20,7 +20,7 @@ To fix this issue the solution were to:
 But here the problem did not came from those two assumption.
 Audric (My coworker) Thought that maybe it was the servomotor wich did not work, So we have tried to move the servomotor separetly with a more simple program.
 [servo test](https://drive.google.com/file/d/1sBgIdRgADSiTIa0Xv_KnTtk07N9oUKNa/view?usp=share_link)
-And the servomotor did work, The last thing left was to verify the program.
+And the servomotor did work, the last thing left was to verify the program.
 
 
 Thank to Guillaume we have found this issue:

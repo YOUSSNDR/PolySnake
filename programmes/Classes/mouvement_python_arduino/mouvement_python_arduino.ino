@@ -28,7 +28,7 @@ void setup() {
 }
 
 void loop(){
-mymove.slither(3, 50, 2, 2.5);
+mymove.slither(0, 30, 2, 0.8);
 //mymove.straightline();
 //mymove.slither(-25,30,2.5,2);
  /*int K1=35;

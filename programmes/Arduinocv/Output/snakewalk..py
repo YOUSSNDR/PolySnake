@@ -4,4 +4,7 @@ from time import sleep
 arduino = SerialObject("COM14")
 
 while True:
-    arduino.sendData()
+    #arduino.sendData([1])
+    ##sleep(2)
+    arduino.sendData([1])
+    ##sleep(2)

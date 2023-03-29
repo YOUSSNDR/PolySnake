@@ -17,9 +17,9 @@ void setup() {
   mymove.myServos[4].attach(7);
   mymove.myServos[5].attach(8);
   mymove.myServos[6].attach(10);
-  mymove.myServos[7].attach(11);
-  mymove.myServos[8].attach(8);
-  mymove.myServos[9].attach(5);
+  //mymove.myServos[7].attach(11);
+  //mymove.myServos[8].attach(8);
+  //mymove.myServos[9].attach(5);
 
   
   //initialisation des servos formant une ligne droite

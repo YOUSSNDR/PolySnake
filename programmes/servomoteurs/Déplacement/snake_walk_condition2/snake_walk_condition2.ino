@@ -9,7 +9,7 @@ float Shift = 2*pi/TotalNumberofServos; // Phase lag between segments
 float Wavelengths, rads;
 int  MaxAngleDisplacement;
 int r=0; //angle en degré
-bool condition= true; //if true continue else stop everything
+bool condition= true; //si vrai on continue sinon on stope tout
 
 void setup() {
   Serial.begin(9600);
@@ -34,7 +34,7 @@ void setup() {
   delay(2000);  
 }
 
-//calcul of the needed angle
+// calcul of the angle
 float teta(int offset, int Amplitude, int Speed, float Wavelengths, int j, float rads){
 return 90+offset+Amplitude*sin(Speed*rads+j*Wavelengths*Shift);
 }
@@ -60,7 +60,6 @@ void slither(int offset, int Amplitude, int Speed, float Wavelengths){
     }
     r= r+1;
     rads=r*pi/180;
-    //verify condition
    for(int j=0; j<8; j++){ 
       myServos[j].write(teta(offset,Amplitude,Speed,Wavelengths,j,rads));
       //Serial.println(rads);      
@@ -74,21 +73,42 @@ void slither(int offset, int Amplitude, int Speed, float Wavelengths){
   }     
 }
 
-void choose(value){
-if(value==0){
-slither
+// choose the direction
+void choose(int value){
+  if(value==0){
+    while(value==0){
+      slither(2,35,2,0.8);//forward
+      //read value
+    }
+  }
+  else if(value==1){
+    while(value==1){
+      slither();//right turn
+      //read value
+    }
+  }
+  else if(value==2){
+    while(value==2){
+      slither();//left turn
+      //read value
+    }
 }
-else if(value==1){
-
-}
-else if(value==2){
-
-}
-else if(value==3){
-  
-}
+  else if(value==3){
+    while(value==3){
+      slither();//bakward (négative amplitude?)
+      //read value
+    }
+  }
+  else{
+    condition=false;
+    while(value>3){
+      slither();//stopp
+      //read value
+    }
+  }  
 }
     
 void loop() {
-  slither(2,35,2,0.8);
+  //slither(2,35,2,0.8);
+  //ajouter les calls pour la modif de value
 }

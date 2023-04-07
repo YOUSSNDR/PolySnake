@@ -55,6 +55,7 @@ void slither(int offset, int Amplitude, int Speed, float Wavelengths){
     MaxAngleDisplacement=abs(offset)+Amplitude;
   }
   while(condition){
+    //read distance (distance can modify value)
     if(r>=360){
       r=0;
     }

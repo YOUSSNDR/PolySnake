@@ -16,7 +16,7 @@ def write(x):
 ##    return data
 
 def watch():
-    
+
 
 
 while True:

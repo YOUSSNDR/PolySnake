@@ -4,7 +4,7 @@ we will be using the library Serial(from pyserial)
 
 #### Arduino serial
 we will be using two arduino an Uno and a Nano
-the serial.Serial allow us to connect the port  to the python program
+the serial.Serial allow us to connect the port to the python program
 
 #### def read
 here we read de value printed by the arduino nano

@@ -2,7 +2,7 @@
 ### Need to study the wheels
 [how snake skin work](https://www.pnas.org/doi/10.1073/pnas.0812533106)
 
-### Snake deplacement
+### Snake deplacement (what we want)
 - read a distance:(we might use an arduino nano for that)
     - if to short:
         - stop the slither motion
@@ -10,20 +10,20 @@
         - activate the camera
         - take the order
     - else:
-    - continue the slither motion 
+    - keep the slither motion 
 
-#### For that we need :
-- arduino nano card
-- arduino uno card 
-- raspberry zero W card
+#### For that we will use :
+- an arduino nano card
+- an arduino uno card 
+- a raspberry zero W card
 
 #### How will they work
 
-The arduino nano will take the distances continuously and advert the raspberry zero W when the limit distance is reached
+- The arduino nano will take the distances continuously and advert the raspberry zero W when the limit distance is reached.
 
-The raspberry zero w card will be used when the limit distance is reach, it will take picture of the obstacle to know which path it should take.
+- The raspberry zero w card will be used when the limit distance is reach, it will take picture of the obstacle to know which path it should take.
 
-The arduino Uno card will handle the slither movment, will receive order to stop when the limit distance is reached (may ask the snake to get on line). Will receive order from the raspberry zero W to know which path it should follow.
+- The arduino Uno card will handle the slither movment, will receive order to stop when the limit distance is reached (may ask the snake to get on line). Will receive order from the raspberry zero W to know which path it should follow.
 
 ### programm part
 
@@ -37,7 +37,7 @@ Uno:
 - cases depending on the python programme
 
 #### Python
-receive the distance from arduino nano, if distance too short send value to arduino Uno (to stop the slithering motion), then take a picture and read the information. 
+- receive the distance from arduino nano, if the distance is too short send a value to arduino Uno (to stop the slithering motion), then take a picture and read the information on it. 
 
 ### Etapes
 #### 1) slither program for displacement arduino uno (servos)

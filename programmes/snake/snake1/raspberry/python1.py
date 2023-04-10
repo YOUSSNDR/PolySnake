@@ -1,6 +1,7 @@
 import serial
 import time
 
+limit=15 # 15 cm distance where the snake stops to make a decision
 arduinoNANO = serial.Serial(port='', baudrate=115200, timeout=.1)
 arduinoUNO = serial.Serial(port='COM14', baudrate=9600, timeout=.1)
 
@@ -22,7 +23,7 @@ def watch():
 while True:
     # let s get first the distance value
     distance = read()
-    if distance < 15:
+    if distance < limit:
         write(4) ## we stop the snake
         decision=watch()  ## start the image recognition protocol
         if decision==0:

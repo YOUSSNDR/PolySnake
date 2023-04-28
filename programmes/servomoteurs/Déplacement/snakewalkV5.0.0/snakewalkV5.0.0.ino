@@ -13,7 +13,7 @@ void setup() {
   Serial.begin(9600);
 
 
-  myServos[0].attach(2);
+  myServos[0].attach(13);
   myServos[1].attach(3);
   myServos[2].attach(4);
   myServos[3].attach(6);

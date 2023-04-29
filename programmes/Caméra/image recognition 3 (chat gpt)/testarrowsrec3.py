@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # Load the image
-image = cv2.imread("arrows.png")  # Replace "arrows.jpg" with your image filename
+image = cv2.imread("Arrow.png")  # Replace "arrows.jpg" with your image filename
 
 # Apply Gaussian blur to the image to reduce noise
 image_blur = cv2.GaussianBlur(image, (5, 5), 0)

@@ -8,7 +8,7 @@ import numpy as np
 
 def sign(x:float) -> int:
     return 0 if x==0 else (-1 if x<0 else 1)
-pic = cv2.imread("arrow.png")
+pic = cv2.imread("arrows.png")
 
 #draw the image
 

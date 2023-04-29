@@ -4,8 +4,9 @@ import numpy as np
 
 #print(os.listdir("C:\Users\Ali08\OneDrive\Bureau\ecole d'ingé\PolySnake\programmes\Caméra\images"))
 
-pic = cv2.imread("Arrow.png")
-
+#pic = cv2.imread("Arrow.png")
+cap = cv2.VideoCapture(0)
+result, pic = cap.read()
 
 #adapting the image for the fincontours command
 """def  preprocess(pic):
@@ -32,9 +33,16 @@ for i in range(len(contours)):
     cv2.drawContours(mask, [contours[i]], 0, 255, -1)
     # take the medium color
     color = cv2.mean(pic, mask=mask)[:3]
-    print('color', i,':', color)
-    cv2.drawContours(pic, contours[i], -1, (0, 255, 0), 3)
-
+    objet='objet' + str(i)
+    print(objet, ':', color)
+    x, y, w, h = cv2.boundingRect(contours[i])
+    #if color[0]<80 and color[1]<80 and color[2]>180:
+    if color[2] >= int(color[0] + color[1] - 30):
+        cv2.putText(pic, objet, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+        cv2.drawContours(pic, contours[i], -1, (0, 255, 0), 3)
+    else:
+        cv2.putText(pic, objet, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 0, 0), 2)
+        cv2.drawContours(pic, contours[i], -1, (255, 0, 0), 3)
 
 cv2.imshow("pic", pic)
 cv2.waitKey(0)

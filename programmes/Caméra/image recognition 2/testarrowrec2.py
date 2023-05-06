@@ -25,7 +25,7 @@ def find_tip(points, convex_hull):
 
 
 # read the image
-img = cv2.imread("arrows.png")
+img = cv2.imread("arrowdown.png")
 #cap = cv2.VideoCapture(0)
 #result, img = cap.read()
 contours, hierarchy = cv2.findContours(preprocess(img), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)

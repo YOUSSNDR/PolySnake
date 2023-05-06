@@ -13,14 +13,14 @@ void setup() {
   Serial.begin(9600);
 
 
-  myServos[0].attach(13);
-  myServos[1].attach(3);
-  myServos[2].attach(4);
-  myServos[3].attach(6);
-  myServos[4].attach(7);
-  myServos[5].attach(8);
-  myServos[6].attach(10);
-  myServos[7].attach(11);
+  myServos[0].attach(7);
+  myServos[1].attach(8);
+  myServos[2].attach(9);
+  myServos[3].attach(10);
+  myServos[4].attach(11);
+  myServos[5].attach(12);
+  myServos[6].attach(13);
+  //myServos[7].attach(13);
   //myServos[8].attach(8);
   //myServos[9].attach(5);
 
@@ -75,7 +75,7 @@ le shift permet une différence de phase entre les servos
     i=i+5;
 }*/
   
-  slither(0,37,2,0.8);
+  slither(0,43,2,1);
   //straightline();
   //slither(20, 35, 3, 1); //avance et tourne légèrement (droite)
   //slither(-20, 35, 2, 1.5);//avance et tourne légèrement (gauche)

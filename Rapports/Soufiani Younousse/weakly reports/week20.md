@@ -10,11 +10,11 @@ We will sart with the [second program](https://github.com/YOUSSNDR/PolySnake/blo
 
 For the [third program](https://github.com/YOUSSNDR/PolySnake/blob/2009bf68ff010cee0d42282d08546313a76a4bc5/programmes/Cam%C3%A9ra/image%20recognition%205%20(youss)/testarrowrec5.3.py) program i have changed the way the program recognise color to be more efficient the program now check if the color hue value of the pixel at the center of the contour is in a range of 0 tO 5 OR above 170 to know if it is red. this methode is more efficient as even if the brightness change the HVR mode color can help recognise the color.
 
-for the [fourth program]() it mostly a rearrangment of the third programm.
+for the [fourth program](https://github.com/YOUSSNDR/PolySnake/blob/2009bf68ff010cee0d42282d08546313a76a4bc5/programmes/Cam%C3%A9ra/image%20recognition%205%20(youss)/testarrowrec5.4.py) it mostly a rearrangment of the third programm.
 here we choose to first check the contour to see if it match the one of an arrow and then check the color to see if it is red.
 ![img prgm4](https://github.com/YOUSSNDR/PolySnake/blob/2009bf68ff010cee0d42282d08546313a76a4bc5/Rapports/Soufiani%20Younousse/images%20younousse/myprogram4.jpg)
 
-i have stock all the program needed for the snake on a file [snake 2](https://github.com/YOUSSNDR/PolySnake/blob/2009bf68ff010cee0d42282d08546313a76a4bc5/programmes/Cam%C3%A9ra/image%20recognition%205%20(youss)/testarrowrec5.4.py)
+i have stock all the program needed for the snake on a file [snake 2](https://github.com/YOUSSNDR/PolySnake/tree/main/programmes/snake/snake2.0)
 
 
 We had later trouble using the arduino nano (it would not upload any program). It may be a problem from arduino.

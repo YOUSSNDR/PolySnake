@@ -34,9 +34,9 @@ def find_tip(points, convex_hull):
             return tuple(points[j])
 
 #True program
-pic = cv2.imread("Arrown.png")
-#cap = cv2.VideoCapture(0)
-#result, pic = cap.read()
+#pic = cv2.imread("Arrow.png")
+cap = cv2.VideoCapture(0)
+result, pic = cap.read()
 #we use HSV color to inprove the code
 hsv_pic = cv2.cvtColor(pic, cv2.COLOR_BGR2HSV)
 
@@ -73,7 +73,7 @@ def arrow_check(contours):
                 # we form two list gathering coordinates on x and on y
                 coo_x = np.array([arrowhead_x, cx])
                 coo_y = np.array([arrowhead_y, cy])
-
+                direction='uncknown'
                 #Now let's check the direction
                 if abs(coo_x[0] - coo_x[1]) > abs(coo_y[0] - coo_y[1]):
                     if coo_x[0] - coo_x[1] > 0:

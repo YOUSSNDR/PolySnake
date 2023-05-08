@@ -35,9 +35,9 @@ def find_tip(points, convex_hull):
 
 
 #True program
-#pic = cv2.imread("Arrowdown.png")
-cap = cv2.VideoCapture(0)
-result, pic = cap.read()
+pic = cv2.imread("Arrow.png")
+#cap = cv2.VideoCapture(0)
+#result, pic = cap.read()
 #we use HSV color to inprove the code
 hsv_pic = cv2.cvtColor(pic, cv2.COLOR_BGR2HSV)
 

@@ -3,11 +3,9 @@
 
 mouvement mymove;
 
-int O, A, v, x;
-float L;
-bool condition;
 void setup() {
-  Serial.begin(9600);
+  //we attach the different servos to their pin
+  Serial.begin(9600); 
   mymove.myServos[0].attach(6);
   mymove.myServos[1].attach(7);
   mymove.myServos[2].attach(8);
@@ -20,17 +18,19 @@ void setup() {
   //mymove.myServos[9].attach(5);
 
   
-  //initialisation des servos formant une ligne droite
+  //initialise the servos as a straightline
   mymove.straightline();
   delay(2000);
 }
 
 void loop(){
-  //x=Serial.readString().toInt();
-  //condition, O, A, v, L= mymove.choose(x);
-  //mymove.slither(O, A, v, L);
+  x=Serial.readString().toInt(); //take the value comming from the raspberry
+  condition, O, A, v, L= mymove.choose(x); // give the different value needed depending on "x"
+  mymove.slither(O, A, v, L); //make the snke move with the given values
 
-  mymove.slither(0, 43, 2, 1);
+//for the test
+//x=0
+//mymove.slither(0, 43, 2, 1);
 //mymove.straightline();
 
  /*int K1=35;

@@ -76,6 +76,7 @@ le shift permet une différence de phase entre les servos
 }*/
   
   slither(0,43,2,1);
+  
   //straightline();
   //slither(20, 35, 3, 1); //avance et tourne légèrement (droite)
   //slither(-20, 35, 2, 1.5);//avance et tourne légèrement (gauche)

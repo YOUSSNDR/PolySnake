@@ -1,7 +1,7 @@
 # PolySnake
 
 <p align="center">
-  <img src="![IMG_20230425_100100-removebg-preview](https://github.com/YOUSSNDR/PolySnake/assets/114215795/f550050e-da9d-479e-a392-b0283c67331e)" />
+  <img src=![IMG_20230425_100100-removebg-preview](https://github.com/YOUSSNDR/PolySnake/assets/114215795/f550050e-da9d-479e-a392-b0283c67331e)/>
 </p>
 
 ## Introduction

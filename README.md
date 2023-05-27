@@ -1,5 +1,8 @@
 # PolySnake
 
+![IMG_20230425_100100-removebg-preview](https://github.com/YOUSSNDR/PolySnake/assets/114215795/684a5a1a-7f8c-41ac-969d-e59294f8cd0d)
+
+
 ## Introduction
 
 Nowadays, the world suffers from many natural disasters which cause hundreds or even thousands of victims every year. For example, according to [1] the 1976 Tangshan earthquake was an earthquake that hit the region around Tangshan which ravaged 85% of the buildings in the. The official report claimed 242,769 deaths, but when considered the missing, the injured who later died, and the deaths in nearby Beijing and Tianjin, making it the deadliest earthquake in China and among the top disasters in China. 
